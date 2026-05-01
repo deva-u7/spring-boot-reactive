@@ -1,17 +1,20 @@
-# reactive-spring-boot
+# spring-boot-reactive
 
-This project demonstrates the implementation of reactive programming principles using Spring Boot and Spring WebFlux with MySQL as the data store. It consists of two web applications communicating asynchronously via reactive streams (Flux and Mono).
+Two reactive Spring Boot services communicating asynchronously over `Flux` / `Mono`, backed by MySQL via reactive repositories. Non-blocking end-to-end.
 
-#Technologies Used
-- Spring Boot: Framework for building reactive applications.
-- Spring WebFlux: Provides reactive programming support for web applications.
-- MySQL: Relational database used with reactive repositories.
-- Java 21: Programming language used for development.
-- Maven: Dependency management and build tool.
+## Stack
 
+Spring Boot 3 · Spring WebFlux · Java 21 · MySQL · Maven
 
-#Key Features
-- REST API using Spring WebFlux: Asynchronous endpoints for handling HTTP requests.
-- Handler Functions: Utilizes functional endpoints for reactive programming.
-- Reactive Repositories: Uses Flux and Mono for asynchronous database operations with MySQL.
-- Exception Handling: Implemented strategies for handling errors in reactive pipelines.
+## What's in here
+
+- REST API using WebFlux annotation-based controllers
+- Handler functions for the functional endpoint style (alternative to `@Controller`)
+- Reactive repositories — `Flux<T>` / `Mono<T>` returns from data layer through to the response
+- Error handling strategies for reactive pipelines
+
+## Run
+
+```bash
+./mvnw spring-boot:run
+```
